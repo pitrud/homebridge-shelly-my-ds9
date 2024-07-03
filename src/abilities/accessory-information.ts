@@ -1,4 +1,4 @@
-import { Device } from 'shellies-ds9';
+import { Device } from 'shellies-my';
 
 import { Ability, ServiceClass } from './base';
 
