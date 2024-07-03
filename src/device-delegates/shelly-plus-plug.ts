@@ -1,4 +1,4 @@
-import { ShellyPlusPlugUs,ShellyPlusPlugEu } from 'shellies-ds9';
+import { ShellyPlusPlugUs,ShellyPlusPlugEu } from 'shellies-my';
 
 import { DeviceDelegate } from './base';
 
