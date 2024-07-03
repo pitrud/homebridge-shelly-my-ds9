@@ -1,4 +1,4 @@
-import { ComponentLike, Cover, Device, Switch, Light } from 'shellies-ds9';
+import { ComponentLike, Cover, Device, Switch, Light } from 'shellies-my';
 import { PlatformAccessory } from 'homebridge';
 
 import {
