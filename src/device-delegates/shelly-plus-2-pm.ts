@@ -1,7 +1,7 @@
 import {
   ShellyPlus2Pm,
   ShellyPlus2PmRev1,
-} from 'shellies-ds9';
+} from 'shellies-my';
 
 import { DeviceDelegate } from './base';
 
