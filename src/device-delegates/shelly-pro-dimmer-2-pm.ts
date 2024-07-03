@@ -1,4 +1,4 @@
-import { ShellyProDimmer2Pm } from 'shellies-ds9';
+import { ShellyProDimmer2Pm } from 'shellies-my';
 
 import { DeviceDelegate } from './base';
 
