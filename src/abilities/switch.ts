@@ -3,19 +3,26 @@ import { CharacteristicValue as ShelliesCharacteristicValue, Switch } from 'shel
 
 import { Ability, ServiceClass } from './base';
 
+const names = {
+  'switch': 'Switch',
+  'lightSwitch': 'Light Switch',
+};
+
 export class SwitchAbility extends Ability {
   /**
    * @param component - The switch component to control.
    */
-  constructor(readonly component: Switch) {
+  constructor(readonly component: Switch, readonly type: 'switch' | 'lightSwitch' = 'switch') {
     super(
-      `Switch ${component.id + 1}`,
-      `switch-${component.id}`,
+      `${names[type]} ${component.id + 1}`,
+      `${type}-${component.id}`,
     );
-
   }
 
   protected get serviceClass(): ServiceClass {
+    if (this.type === 'lightSwitch') {
+      return this.Service.Lightbulb;
+    }
     return this.Service.Switch;
   }
 
