@@ -100,7 +100,8 @@
                   "type": "string",
                   "oneOf": [
                     { "title": "Outlet", "enum": [ "outlet" ] },
-                    { "title": "Switch", "enum": [ "switch" ] }
+                    { "title": "Switch", "enum": [ "switch" ] },
+                    { "title": "Light Switch", "enum": [ "lightSwitch" ] }
                   ],
                   "default": "switch"
                 }
