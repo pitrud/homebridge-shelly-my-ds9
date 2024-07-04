@@ -59,7 +59,7 @@ export interface SwitchOptions {
   /**
    * The type of accessory used to represent the switch.
    */
-  type?: 'outlet' | 'switch';
+  type?: 'outlet' | 'switch' | 'lightSwitch';
 }
 
 export interface CoverOptions {
