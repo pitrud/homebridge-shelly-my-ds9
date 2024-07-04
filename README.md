@@ -30,6 +30,7 @@ For the first generation, see [homebridge-shelly](https://github.com/alexryd/hom
 * [Shelly Pro 4 PM](https://kb.shelly.cloud/knowledge-base/shelly-pro-4pm)
 * [Shelly Pro Dimmer 1PM](https://kb.shelly.cloud/knowledge-base/shelly-pro-dimmer-1pm)
 * [Shelly Pro Dimmer 2PM](https://kb.shelly.cloud/knowledge-base/shelly-pro-dimmer-2pm)
+* [Shelly Plus RGBW PM](https://kb.shelly.cloud/knowledge-base/shelly-plus-rgbw-pm)
 
 ## Installation
 
