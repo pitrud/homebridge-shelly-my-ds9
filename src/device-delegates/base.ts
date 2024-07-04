@@ -196,7 +196,7 @@ export abstract class DeviceDelegate {
     // determine the switch tyoe
     const type = typeof switchOpts.type === 'string' ? switchOpts.type.toLowerCase() : 'switch';
     const isOutlet = type === 'outlet';
-    const isLight = type === 'lightSwitch';
+    const isLight = type === 'lightswitch';
 
     const id = o.single === true ? 'switch' : `switch-${swtch.id}`;
     const nameSuffix = o.single === true ? null : `Switch ${swtch.id + 1}`;
