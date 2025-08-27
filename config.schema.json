@@ -1,5 +1,5 @@
 {
-  "pluginAlias": "ShellyDS9",
+  "pluginAlias": "homebridge-shelly-my-ds9",
   "pluginType": "platform",
   "singular": true,
   "schema": {

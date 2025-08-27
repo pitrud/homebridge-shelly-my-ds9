@@ -31,7 +31,7 @@ export const PLUGIN_NAME = 'homebridge-shelly-my-ds9';
 /**
  * The name of this homebridge platform.
  */
-export const PLATFORM_NAME = 'homebridge-shelly-my-ds9';
+export const PLATFORM_NAME = 'ShellyMyDS9';
 
 /**
  * Utility class that "discovers" devices from the configuration options.

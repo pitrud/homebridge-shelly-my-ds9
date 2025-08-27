@@ -7,7 +7,7 @@ import { DeviceDelegate } from './base';
  */
 export class ShellyPlusRGBWPmDelegate extends DeviceDelegate {
   protected setup() {
-    const d = this.device as ShellyPlusRGBWPm;
+    const d = this.device as unknown as ShellyPlusRGBWPm;
 
     this.addLight(d.light0);
     this.addLight(d.light1);
