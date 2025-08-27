@@ -1,6 +1,6 @@
 import { PlatformConfig } from 'homebridge';
 
-import { DeviceId } from 'shellies-my';
+import { DeviceId } from 'shellies-ds9';
 
 export interface MdnsOptions {
   /**
@@ -59,7 +59,7 @@ export interface SwitchOptions {
   /**
    * The type of accessory used to represent the switch.
    */
-  type?: 'outlet' | 'switch' | 'lightSwitch';
+  type?: 'outlet' | 'switch';
 }
 
 export interface CoverOptions {

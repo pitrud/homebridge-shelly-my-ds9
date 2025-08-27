@@ -13,7 +13,7 @@ import {
   DeviceIdentifiers,
   MdnsDeviceDiscoverer,
   Shellies,
-} from 'shellies-my';
+} from 'shellies-ds9';
 
 import { CustomCharacteristics, createCharacteristics } from './utils/characteristics';
 import { CustomServices, createServices } from './utils/services';
@@ -26,12 +26,12 @@ type AccessoryUuid = string;
 /**
  * The name of this plugin.
  */
-export const PLUGIN_NAME = 'homebridge-shelly-my';
+export const PLUGIN_NAME = 'homebridge-shelly-ds9';
 
 /**
  * The name of this homebridge platform.
  */
-export const PLATFORM_NAME = 'ShellyNG';
+export const PLATFORM_NAME = 'ShellyDS9';
 
 /**
  * Utility class that "discovers" devices from the configuration options.

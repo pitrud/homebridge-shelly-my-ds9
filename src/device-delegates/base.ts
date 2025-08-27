@@ -1,4 +1,4 @@
-import { ComponentLike, Cover, Device, Switch, Light } from 'shellies-my';
+import { ComponentLike, Cover, Device, Switch, Light } from 'shellies-ds9';
 import { PlatformAccessory } from 'homebridge';
 
 import {
@@ -45,6 +45,10 @@ export interface AddCoverOptions {
    * Whether the accessory should be active.
    */
   active: boolean;
+  /**
+   * Whether the device has a single cover.
+   */
+  single: boolean;
 }
 
 export interface AddLightOptions {
@@ -196,7 +200,6 @@ export abstract class DeviceDelegate {
     // determine the switch tyoe
     const type = typeof switchOpts.type === 'string' ? switchOpts.type.toLowerCase() : 'switch';
     const isOutlet = type === 'outlet';
-    const isLight = type === 'lightswitch';
 
     const id = o.single === true ? 'switch' : `switch-${swtch.id}`;
     const nameSuffix = o.single === true ? null : `Switch ${swtch.id + 1}`;
@@ -205,8 +208,7 @@ export abstract class DeviceDelegate {
       id,
       nameSuffix,
       new OutletAbility(swtch).setActive(isOutlet),
-      new SwitchAbility(swtch, 'lightSwitch').setActive(!isOutlet && isLight),
-      new SwitchAbility(swtch, 'switch').setActive(!isOutlet && !isLight),
+      new SwitchAbility(swtch).setActive(!isOutlet),
       // use the apower property to determine whether power metering is available
       new PowerMeterAbility(swtch).setActive(swtch.apower !== undefined),
     ).setActive(switchOpts.exclude !== true && o.active !== false);
@@ -228,8 +230,10 @@ export abstract class DeviceDelegate {
     const isDoor = type === 'door';
     const isWindowCovering = type === 'windowcovering';
 
+    const id = o.single === true ? 'cover' : `cover-${cover.id}`;
+
     return this.createAccessory(
-      'cover',
+      id,
       'Cover',
       new CoverAbility(cover, 'door').setActive(isDoor),
       new CoverAbility(cover, 'windowCovering').setActive(isWindowCovering),

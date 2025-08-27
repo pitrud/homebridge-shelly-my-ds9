@@ -1,9 +1,10 @@
 import {
   ShellyPlus1Pm,
   ShellyPlus1PmUl,
+  ShellyPlus1PmV3,
   ShellyPlus1PmMini,
   ShellyPlus1PmMiniV3,
-} from "shellies-my";
+} from "shellies-ds9";
 
 import { DeviceDelegate } from "./base";
 
@@ -22,6 +23,7 @@ DeviceDelegate.registerDelegate(
   ShellyPlus1PmDelegate,
   ShellyPlus1Pm,
   ShellyPlus1PmUl,
+  ShellyPlus1PmV3,
   ShellyPlus1PmMini,
   ShellyPlus1PmMiniV3
 );

@@ -1,28 +1,21 @@
 import { CharacteristicValue } from 'homebridge';
-import { CharacteristicValue as ShelliesCharacteristicValue, Switch } from 'shellies-my';
+import { CharacteristicValue as ShelliesCharacteristicValue, Switch } from 'shellies-ds9';
 
 import { Ability, ServiceClass } from './base';
-
-const names = {
-  'switch': 'Switch',
-  'lightSwitch': 'Light Switch',
-};
 
 export class SwitchAbility extends Ability {
   /**
    * @param component - The switch component to control.
    */
-  constructor(readonly component: Switch, readonly type: 'switch' | 'lightSwitch' = 'switch') {
+  constructor(readonly component: Switch) {
     super(
-      `${names[type]} ${component.id + 1}`,
-      `${type}-${component.id}`,
+      `Switch ${component.id + 1}`,
+      `switch-${component.id}`,
     );
+
   }
 
   protected get serviceClass(): ServiceClass {
-    if (this.type === 'lightSwitch') {
-      return this.Service.Lightbulb;
-    }
     return this.Service.Switch;
   }
 
